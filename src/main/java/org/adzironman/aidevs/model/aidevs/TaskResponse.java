@@ -14,4 +14,5 @@ public class TaskResponse {
     String answer;
     String cookie;
     String question;
+    String hint;
 }
