@@ -1,0 +1,21 @@
+{
+  "name": "addUser",
+  "description": "Add a user",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Provide the name of the user"
+      },
+      "surname": {
+        "type": "string",
+        "description": "Provide the surname of the user"
+      },
+      "year": {
+        "type": "integer",
+        "description": "Provide year of birth"
+      }
+    }
+  }
+}
