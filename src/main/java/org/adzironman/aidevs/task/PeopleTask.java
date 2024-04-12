@@ -31,7 +31,7 @@ public class PeopleTask extends AbstractTask {
     private UrlFileClient urlFileClient;
 
     @SneakyThrows
-    private Person findPersonBasedOnQuestion(List<Person> personList, String question){
+    private Person findPersonBasedOnQuestion(List<Person> personList, String question) {
         Prompt prompt = new Prompt(List.of(new UserMessage(question), new SystemMessage(SYSTEM_MESSAGE_TO_FIND_PERSON)));
         Generation generation = super.chatClient.call(prompt).getResult();
         String personName = generation.getOutput().getContent();
@@ -57,7 +57,8 @@ public class PeopleTask extends AbstractTask {
         String urlContent = urlFileClient.getUrlContent(url);
         List<Person> people;
         try {
-            people = objectMapper.readValue(urlContent, new TypeReference<>(){});
+            people = objectMapper.readValue(urlContent, new TypeReference<>() {
+            });
         } catch (IOException e) {
             log.error(e.getMessage());
             throw e;

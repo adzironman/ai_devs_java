@@ -40,7 +40,7 @@ public class WhoamiTask extends AbstractTask {
             Prompt prompt = new Prompt(List.of(new SystemMessage(systemPrompt), new UserMessage(msg.toString())), chatOptions);
             response = chatClient.call(prompt).getResult().getOutput().getContent();
             isPersonFound = !(response.equalsIgnoreCase("NO"));
-            System.out.println(msg.toString());
+            System.out.println(msg);
             System.out.println(response);
             msg.add(getHint() + ". ");
             Thread.sleep(2000);
