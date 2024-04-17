@@ -15,4 +15,7 @@ public class TaskResponse {
     String cookie;
     String question;
     String hint;
+    String database1;
+    String database2;
+    String url;
 }
